@@ -1,0 +1,11 @@
+<h1>{{diretor.nome}}</h1>
+
+<p>Ano de nascimento: {{diretor.anoNascimento}}</p>
+<p>Nacionalidade: {{diretor.nacionalidade}}</p>
+
+<label>Filmes dirigidos:</label>
+<ul>
+  {{#each diretor.filmes}}
+    <li><a href="/filmes/{{this.id}}">{{this.nome}} ({{this.ano}})</a></li>
+  {{/each}}
+</ul>

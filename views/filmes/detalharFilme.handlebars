@@ -1,0 +1,14 @@
+<h1>{{filme.nome}} ({{filme.ano}})</h1>
+
+<label>Diretor:</label>
+{{#if filme.diretor}}
+  <a href="/diretores/{{filme.diretor.id}}">{{filme.diretor.nome}}</a>
+{{/if}}
+
+
+<label>Elenco:</label>
+<ul>
+  {{#each filme.artistas}}
+    <li><a href="/artistas/{{this.id}}">{{this.nome}}</a></li>
+  {{/each}}
+</ul>

@@ -1,0 +1,11 @@
+<h1>Diretores</h1>
+
+<a href="/diretores/cadastrar">Cadastrar novo diretor</a>
+
+<ul>
+  {{#each diretores}}
+    <li>
+      <a href="/diretores/{{this.id}}">{{this.nome}} ({{this.nacionalidade}})</a>
+    </li>
+  {{/each}}
+</ul>

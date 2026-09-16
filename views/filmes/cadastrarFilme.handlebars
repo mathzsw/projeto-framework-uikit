@@ -1,0 +1,45 @@
+<h1>Cadastrar Filme</h1>
+
+<form action="/filmes" method="POST">
+
+  <div>
+    <label>Nome:</label>
+    <input type="text" name="nome">
+  </div>
+
+  <br>
+
+  <div>
+    <label>Ano:</label>
+    <input type="number" name="ano">
+  </div>
+
+  <br>
+
+  <div>
+    <label>Diretor:</label>
+    <select name="diretorId">
+      {{#each diretores}}
+        <option value="{{this.id}}">{{this.nome}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <br>
+
+  <button type="submit">Salvar</button>
+  
+  <div>
+    <label>Artistas:</label>
+    <select name="artistas" multiple>
+      {{#each artistas}}
+        <option value="{{this.id}}">{{this.nome}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <br>
+
+  <button type="submit">Salvar</button>
+
+</form>

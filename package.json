@@ -1,0 +1,26 @@
+{
+  "name": "projeto-framework-uikit",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para a disciplina de **Desenvolvimento Web — IFPE**, utilizando o framework CSS **UIkit**.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathzsw/projeto-framework-uikit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathzsw/projeto-framework-uikit/issues"
+  },
+  "homepage": "https://github.com/mathzsw/projeto-framework-uikit#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.3",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^6.0.1"
+  }
+}
