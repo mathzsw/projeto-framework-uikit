@@ -1,0 +1,11 @@
+<h1>Fichas Técnicas</h1>
+
+<ul>
+  {{#each fichasTecnicas}}
+    <li>
+      <a href="/fichas-tecnicas/{{this.id}}">
+        Ficha Técnica #{{this.id}}
+      </a>{{#if this.filme}}{{this.filme.titulo}}{{/if}}
+    </li>
+  {{/each}}
+</ul>

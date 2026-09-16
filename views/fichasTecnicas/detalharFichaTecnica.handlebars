@@ -1,12 +1,25 @@
-<h1>{{filme.nome}} ({{filme.ano}})</h1>
+<h1>Ficha Técnica</h1>
 
-<label>Ficha Técnica:</label>
-{{#if filme.fichaTecnica}}
-  <ul>
-    <li>Duração: {{filme.fichaTecnica.duracaoMinutos}} minutos</li>
-    <li>Orçamento: {{filme.fichaTecnica.orcamento}}</li>
-    <li>Bilheteria: {{filme.fichaTecnica.bilheteria}}</li>
-  </ul>
-{{else}}
-  <a href="/filmes/{{filme.id}}/ficha-tecnica/cadastrar">Cadastrar ficha técnica</a>
+<p>
+  <strong>Duração:</strong>
+  {{fichaTecnica.duracaoMinutos}} minutos
+</p>
+
+<p>
+  <strong>Orçamento:</strong>
+  {{fichaTecnica.orcamento}}
+</p>
+
+<p>
+  <strong>Bilheteria:</strong>
+  {{fichaTecnica.bilheteria}}
+</p>
+
+{{#if fichaTecnica.filme}}
+  <p>
+    <strong>Filme:</strong>
+    <a href="/filmes/{{fichaTecnica.filme.id}}">
+      {{fichaTecnica.filme.titulo}}
+    </a>
+  </p>
 {{/if}}

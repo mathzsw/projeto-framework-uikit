@@ -1,11 +1,18 @@
 <h1>{{artista.nome}}</h1>
 
-<p>Nome artístico: {{artista.nomeArtistico}}</p>
-<p>Ano de nascimento: {{artista.anoNascimento}}</p>
+<p><strong>Ano de nascimento:</strong> {{artista.anoNascimento}}</p>
+<p><strong>Nome artístico:</strong> {{artista.nomeArtistico}}</p>
 
-<label>Filmes:</label>
+<h2>Filmes</h2>
+
 <ul>
   {{#each artista.filmes}}
-    <li><a href="/filmes/{{this.id}}">{{this.nome}} ({{this.ano}})</a></li>
+    <li>
+      <a href="/filmes/{{this.id}}">
+        {{this.titulo}} ({{this.ano}})
+      </a>
+    </li>
   {{/each}}
 </ul>
+
+<a href="/artistas">Voltar para artistas</a>

@@ -1,0 +1,13 @@
+<h1>Filmes</h1>
+
+<a href="/filmes/cadastrar">Cadastrar novo filme</a>
+
+<ul>
+  {{#each filmes}}
+    <li>
+      <a href="/filmes/{{this.id}}">
+        {{this.titulo}} ({{this.ano}})
+      </a>
+    </li>
+  {{/each}}
+</ul>
