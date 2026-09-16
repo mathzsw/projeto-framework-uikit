@@ -82,7 +82,6 @@ app.get('/filmes', async (req, res) => {
   res.render('filmes/filme', { filmes });
 });
 
-
 app.get('/filmes/cadastrar', async (req, res) => {
   const artistas = await Artista.findAll({ raw: true });
   const diretores = await Diretor.findAll({ raw: true });
@@ -94,6 +93,8 @@ app.get('/filmes/cadastrar', async (req, res) => {
 });
 
 app.post('/filmes', async (req, res) => {
+  console.log(req.body);
+
   const titulo = req.body.titulo;
   const ano = req.body.ano;
   const diretorId = req.body.diretorId;

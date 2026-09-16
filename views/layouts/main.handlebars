@@ -11,7 +11,35 @@
 
 <body>
 
-    {{{body}}}
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-container">
+            <div class="uk-navbar-left">
+
+                <a class="uk-navbar-item uk-logo" href="/filmes">
+                    Catálogo de Filmes
+                </a>
+
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="/filmes">Filmes</a>
+                    </li>
+
+                    <li>
+                        <a href="/artistas">Artistas</a>
+                    </li>
+
+                    <li>
+                        <a href="/diretores">Diretores</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="uk-container uk-margin-large-top uk-margin-large-bottom">
+        {{{body}}}
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.24.2/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.24.2/dist/js/uikit-icons.min.js"></script>
