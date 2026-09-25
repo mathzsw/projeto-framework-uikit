@@ -25,13 +25,19 @@
 </ul>
 
 {{#if filme.fichaTecnica}}
-  <h2>Ficha Técnica</h2>
+  <button class="uk-button uk-button-primary" uk-toggle="target: #modal-ficha">
+    Ver ficha técnica completa
+  </button>
 
-  <p>Duração: {{filme.fichaTecnica.duracaoMinutos}} minutos</p>
-  <p>Orçamento: {{filme.fichaTecnica.orcamento}}</p>
-  <p>Bilheteria: {{filme.fichaTecnica.bilheteria}}</p>
-{{else}}
-  <a href="/filmes/{{filme.id}}/ficha-tecnica/cadastrar">
-    Cadastrar ficha técnica
-  </a>
+  <div id="modal-ficha" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+      <h2 class="uk-modal-title">Ficha Técnica</h2>
+
+      <p><strong>Duração:</strong> {{filme.fichaTecnica.duracaoMinutos}} minutos</p>
+      <p><strong>Orçamento:</strong> {{filme.fichaTecnica.orcamento}}</p>
+      <p><strong>Bilheteria:</strong> {{filme.fichaTecnica.bilheteria}}</p>
+
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+    </div>
+  </div>
 {{/if}}

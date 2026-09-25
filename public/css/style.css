@@ -1,0 +1,65 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: #ffffff;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+h2,
+h3 {
+    font-weight: 700;
+}
+
+.uk-logo {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+}
+
+.uk-card {
+    border-radius: 4px;
+}
+
+.uk-button {
+    border-radius: 3px;
+}
+
+.uk-button-primary {
+    background: #222222;
+    border-radius: 3px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    text-transform: none;
+}
+
+.uk-button-primary:hover {
+    background: #444444;
+}
+
+.uk-card-default {
+    border: 1px solid #dddddd;
+    box-shadow: none;
+}
+
+.uk-card-default h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.uk-card-default p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.05rem;
+    margin-top: 0;
+}
+
+.uk-card-default .uk-button-text {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+}
