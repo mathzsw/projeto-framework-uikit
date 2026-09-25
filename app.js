@@ -76,6 +76,32 @@ app.post('/filmes/:id/ficha-tecnica', async (req, res) => {
   res.redirect(`/filmes/${id}`);
 });
 
+app.get('/fichas-tecnicas', async (req, res) => {
+  const fichasTecnicas = await FichaTecnica.findAll({
+    include: [{ model: Filme, as: 'filme' }]
+  });
+
+  res.render('fichasTecnicas/fichaTecnica', {
+    fichasTecnicas: fichasTecnicas.map((ficha) => ficha.toJSON())
+  });
+});
+
+app.get('/fichas-tecnicas/:id', async (req, res) => {
+  const id = req.params.id;
+
+  const fichaTecnica = await FichaTecnica.findByPk(id, {
+    include: [{ model: Filme, as: 'filme' }]
+  });
+
+  if (!fichaTecnica) {
+    return res.status(404).send('Ficha técnica não encontrada');
+  }
+
+  res.render('fichasTecnicas/detalharFichaTecnica', {
+    fichaTecnica: fichaTecnica.toJSON()
+  });
+});
+
 app.get('/filmes', async (req, res) => {
   const filmes = await Filme.findAll({ raw: true });
 
