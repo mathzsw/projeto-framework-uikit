@@ -22,4 +22,4 @@ Projeto desenvolvido para a disciplina de **Desenvolvimento Web — IFPE**, util
 
 ### 🎨 Componentes UIkit
 
-Card · Modal · Accordion · Navbar · Pagination
+Card · Modal · Accordion · Navbar · Alert
