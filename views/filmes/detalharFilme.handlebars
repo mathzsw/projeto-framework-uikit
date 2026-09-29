@@ -12,16 +12,51 @@
   {{/if}}
 </p>
 
-<h2>Elenco</h2>
+<ul uk-accordion>
 
-<ul>
-  {{#each filme.artistas}}
+  <li>
+    <a class="uk-accordion-title" href>
+      Elenco
+    </a>
+
+    <div class="uk-accordion-content">
+      <ul class="uk-list">
+        {{#each filme.artistas}}
+          <li>
+            <a href="/artistas/{{this.id}}">
+              {{this.nome}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </li>
+
+  {{#if filme.fichaTecnica}}
     <li>
-      <a href="/artistas/{{this.id}}">
-        {{this.nome}}
+      <a class="uk-accordion-title" href>
+        Ficha Técnica
       </a>
+
+      <div class="uk-accordion-content">
+        <p>
+          <strong>Duração:</strong>
+          {{filme.fichaTecnica.duracaoMinutos}} minutos
+        </p>
+
+        <p>
+          <strong>Orçamento:</strong>
+          {{filme.fichaTecnica.orcamento}}
+        </p>
+
+        <p>
+          <strong>Bilheteria:</strong>
+          {{filme.fichaTecnica.bilheteria}}
+        </p>
+      </div>
     </li>
-  {{/each}}
+  {{/if}}
+
 </ul>
 
 {{#if filme.fichaTecnica}}
@@ -33,9 +68,20 @@
     <div class="uk-modal-dialog uk-modal-body">
       <h2 class="uk-modal-title">Ficha Técnica</h2>
 
-      <p><strong>Duração:</strong> {{filme.fichaTecnica.duracaoMinutos}} minutos</p>
-      <p><strong>Orçamento:</strong> {{filme.fichaTecnica.orcamento}}</p>
-      <p><strong>Bilheteria:</strong> {{filme.fichaTecnica.bilheteria}}</p>
+      <p>
+        <strong>Duração:</strong>
+        {{filme.fichaTecnica.duracaoMinutos}} minutos
+      </p>
+
+      <p>
+        <strong>Orçamento:</strong>
+        {{filme.fichaTecnica.orcamento}}
+      </p>
+
+      <p>
+        <strong>Bilheteria:</strong>
+        {{filme.fichaTecnica.bilheteria}}
+      </p>
 
       <button class="uk-modal-close-default" type="button" uk-close></button>
     </div>
