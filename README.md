@@ -2,7 +2,7 @@
 
 Projeto desenvolvido para a disciplina de **Desenvolvimento Web — IFPE**, utilizando o framework CSS **UIkit**.
 
-**Matheus Augusto Rodrigues de Alencar & Allycia**
+**Matheus Augusto Rodrigues de Alencar & Allycia da Silva Gomes Ribeiro**
 
 ### 🛠️ Tecnologias
 
