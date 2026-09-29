@@ -19,8 +19,13 @@ app.use(express.static('public'));
 
 app.get('/artistas', async (req, res) => {
   const artistas = await Artista.findAll({ raw: true });
-  res.render('artistas/artista', { artistas });
+
+  res.render('artistas/artista', {
+    artistas,
+    mensagem: req.query.sucesso
+  });
 });
+
 
 app.get('/artistas/cadastrar', (req, res) => {
   res.render('artistas/cadastrarArtista');
@@ -37,8 +42,9 @@ app.post('/artistas', async (req, res) => {
     nomeArtistico: nomeArtistico
   });
 
-  res.redirect('/artistas');
+  res.redirect('/artistas?sucesso=Artista cadastrado com sucesso!');
 });
+
 
 app.get('/artistas/:id', async (req, res) => {
   const id = req.params.id;
@@ -105,8 +111,12 @@ app.get('/fichas-tecnicas/:id', async (req, res) => {
 app.get('/filmes', async (req, res) => {
   const filmes = await Filme.findAll({ raw: true });
 
-  res.render('filmes/filme', { filmes });
+  res.render('filmes/filme', {
+    filmes,
+    mensagem: req.query.sucesso
+  });
 });
+
 
 app.get('/filmes/cadastrar', async (req, res) => {
   const artistas = await Artista.findAll({ raw: true });
@@ -158,9 +168,14 @@ app.get('/filmes/:id', async (req, res) => {
     filme: filme.toJSON()
   });
 });
+
 app.get('/diretores', async (req, res) => {
   const diretores = await Diretor.findAll({ raw: true });
-  res.render('diretores/diretor', { diretores });
+
+  res.render('diretores/diretor', {
+    diretores,
+    mensagem: req.query.sucesso
+  });
 });
 
 app.get('/diretores/cadastrar', (req, res) => {
@@ -178,7 +193,7 @@ app.post('/diretores', async (req, res) => {
     nacionalidade: nacionalidade
   });
 
-  res.redirect('/diretores');
+  res.redirect('/diretores?sucesso=Diretor cadastrado com sucesso!');
 });
 
 app.get('/diretores/:id', async (req, res) => {
