@@ -1,5 +1,12 @@
 <h1>Filmes</h1>
 
+{{#if mensagem}}
+  <div class="uk-alert-success" uk-alert>
+    <a href class="uk-alert-close" uk-close></a>
+    <p>{{mensagem}}</p>
+  </div>
+{{/if}}
+
 <a href="/filmes/cadastrar" class="uk-button uk-button-primary">
   Cadastrar novo filme
 </a>
@@ -15,6 +22,7 @@
     </div>
   {{/each}}
 </div>
+
 <ul class="uk-pagination uk-flex-center">
   <li class="uk-disabled">
     <span uk-pagination-previous></span>
