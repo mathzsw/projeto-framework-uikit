@@ -4,6 +4,10 @@ Projeto desenvolvido para a disciplina de **Desenvolvimento Web — IFPE**, util
 
 **Matheus Augusto Rodrigues de Alencar & Allycia da Silva Gomes Ribeiro**
 
+### 📊 Slides da apresentação
+
+[Aplicação Web com UIkit](https://canva.link/aplicacao-web-com-uikit)
+
 ### 🛠️ Tecnologias
 
 * Node.js
